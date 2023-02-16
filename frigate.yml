@@ -1,0 +1,52 @@
+mqtt:
+  host: a0d7b954-emqx
+  port: 1883
+  user: <mqtt-frigate-user>
+  password: <mqtt-frigate-password>
+  topic_prefix: frigate
+  client_id: frigate
+
+detectors:
+  cpu0:
+    type: cpu
+
+cameras:
+  <camera-name>:
+    ffmpeg:
+      inputs:
+        - path: http://<your-esp32-cam-ip>:8080
+          roles:
+            - detect
+#            - rtmp
+#            - record
+      input_args: -avoid_negative_ts make_zero -fflags nobuffer -flags low_delay -strict experimental -fflags +genpts+discardcorrupt -use_wallclock_as_timestamps 1 -c:v mjpeg
+      output_args:
+        detect: -f rawvideo -pix_fmt yuv420p -an
+#        record: -f segment -pix_fmt yuv420p -segment_time 10 -segment_format mp4 -reset_timestamps 1 -strftime 1 -c:v libx264 -preset ultrafast -an
+#        rtmp: -f flv -pix_fmt yuv420p -c:v libx264 -preset ultrafast -an
+    rtmp:
+      enabled: False
+    record:
+      enabled: False
+    detect:
+      enabled: True
+      width: 1600
+      height: 1200
+      fps: 5
+    objects:
+      track:
+        - person
+#        - cup
+    snapshots:
+      enabled: True
+      timestamp: True
+      bounding_box: True
+      retain:
+        default: 14
+    mqtt:
+      enabled: True
+      timestamp: True
+      bounding_box: True
+      crop: False
+      quality: 100
+      height: 1200
