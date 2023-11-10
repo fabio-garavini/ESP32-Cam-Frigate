@@ -42,10 +42,10 @@ esp32_camera:
   href_pin: GPIO23
   pixel_clock_pin: GPIO22
   power_down_pin: GPIO32
-  resolution: 1600x1200
+  resolution: 1280x720
   jpeg_quality: 10
   agc_mode: auto
-  agc_gain_ceiling: 128x
+  agc_gain_ceiling: 4x
   wb_mode: auto
   vertical_flip: true      #<-- you can cange this if you need
   horizontal_mirror: true  #<-- you can cange this if you need
