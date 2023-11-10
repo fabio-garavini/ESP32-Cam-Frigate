@@ -30,8 +30,8 @@ cameras:
       enabled: False
     detect:
       enabled: True
-      width: 1600
-      height: 1200
+      width: 1280
+      height: 720
       fps: 5
     objects:
       track:
@@ -49,4 +49,4 @@ cameras:
       bounding_box: True
       crop: False
       quality: 100
-      height: 1200
+      height: 720
