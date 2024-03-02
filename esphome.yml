@@ -12,11 +12,11 @@ logger:
 
 # Enable Home Assistant API
 api:
-  encryption:
-    key: <your-esp-encryption-key>
+#  encryption:
+#    key: <your-esp-encryption-key>  <-- You can uncomment and add your encryption key or leave it as it is
 
 ota:
-  password: <your-esp-ota-password>
+#  password: <your-esp-ota-password>  <-- You can uncomment and add your OTA password or leave it as it is
 
 wifi:
   ssid: !secret wifi_ssid
