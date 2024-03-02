@@ -11,10 +11,10 @@ detectors:
     type: cpu
 
 cameras:
-  <camera-name>:
+  esp-cam:    #<-- you can change your camera name here
     ffmpeg:
       inputs:
-        - path: http://<your-esp32-cam-ip>:8080
+        - path: http://<your-esp-cam-ip>:8080
           roles:
             - detect
 #            - rtmp
