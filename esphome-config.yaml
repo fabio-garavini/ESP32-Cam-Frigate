@@ -26,7 +26,7 @@ ota:
 
 dashboard_import:
   package_import_url: github://fabio-garavini/ESP32-Cam-Frigate/esphome-config.yaml@main
-  import_full_config: true
+  import_full_config: false
 
 wifi:
 #  ssid: !secret wifi_ssid            #<-- You need to manually set your wifi credentials: wifi_ssid and wifi_password
@@ -35,9 +35,9 @@ wifi:
 
 captive_portal:
 
+# Ai-Thinker ESP32-CAM
 esp32_camera:
   name: Camera
-  id: camera
   internal: true  # or false   <-- if you don't want to use Frigate
   external_clock:
     pin: GPIO0

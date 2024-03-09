@@ -1,5 +1,5 @@
 mqtt:
-  host: a0d7b954-emqx
+  host: <mqtt-server-host>
   port: 1883
   user: <mqtt-frigate-user>
   password: <mqtt-frigate-password>
@@ -17,7 +17,6 @@ cameras:
         - path: http://<your-esp-cam-ip>:8080
           roles:
             - detect
-#            - rtmp
 #            - record
       input_args: -avoid_negative_ts make_zero -fflags nobuffer -flags low_delay -strict experimental -fflags +genpts+discardcorrupt -use_wallclock_as_timestamps 1 -c:v mjpeg
       output_args:
@@ -30,8 +29,8 @@ cameras:
       enabled: False
     detect:
       enabled: True
-      width: 1280
-      height: 720
+      width: 800
+      height: 600
       fps: 5
     objects:
       track:
@@ -49,4 +48,4 @@ cameras:
       bounding_box: True
       crop: False
       quality: 100
-      height: 720
+      height: 600
