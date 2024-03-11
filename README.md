@@ -9,9 +9,9 @@ The `esphome-config.yaml`file provided within this repository is specifically cu
 
 Before diving into the actual process, please ensure you have the following installations:
 
-- **ESPHome** [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon)
+- **ESPHome** [![ESPHome Addon](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon)
 
-- **Frigate** [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fblakeblackshear%2Ffrigate-hass-addons)
+- **Frigate** [![Frigate Addon](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=ccab4aaf_frigate&repository_url=https%3A%2F%2Fgithub.com%2Fblakeblackshear%2Ffrigate-hass-addons)
 
 Notably, if you are already running a Home Assistant server, these platforms can be readily installed from the [Add-ons Store Page](https://my.home-assistant.io/redirect/supervisor).
 
@@ -21,7 +21,7 @@ Notably, if you are already running a Home Assistant server, these platforms can
 
     ![Add device](https://esphome.io/_images/dashboard_empty.png)
 
-2. **Configuration Replacement:** Proceed by replacing all the contents of your configuration file with the [`esphome-config.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/blob/main/esphome-config.yaml).
+2. **Configuration Replacement:** Proceed by replacing all the contents of your configuration file with the [`esphome-config.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/esphome-config.yaml).
 
 3. **Save and Upload:** After successfully replacing the contents, click on 'Save and upload' your file. (with your esp-cam connected to your computer)
 
@@ -39,9 +39,9 @@ Notably, if you are already running a Home Assistant server, these platforms can
 1. **Find the IP Address:** Start by finding your ESP32 camera's ip address.
     - You can do it from your phone by using [Fing](https://play.google.com/store/apps/details?id=com.overlook.android.fing) or [Wifiman](https://play.google.com/store/apps/details?id=com.ubnt.usurvey)
 
-2. **Frigate Config:** Proceed with the addition of the contents from this repository to your [`frigate.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/blob/main/frigate.yaml) config file.
+2. **Frigate Config:** Proceed with the addition of the contents from this repository to your [`frigate.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/frigate.yaml) config file.
 
-3. **MQTT Server:** If you haven't already make sure to add your MQTT server information on your [`frigate.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/blob/main/frigate.yaml) file
+3. **MQTT Server:** If you haven't already make sure to add your MQTT server information on your [`frigate.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/frigate.yaml) file
 
     ![MQTT Config](images/mqtt-config.png)
 
