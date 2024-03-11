@@ -1,25 +1,55 @@
-# ESP32 Camera integration with ESPHome and Frigate
-This is a project example on how to connect an esp32 camera to Frigate.
-The esphome-config.yaml is made for an Ai-Thinker ESP32-CAM, if you are using a different board edit it.
+# Integrating ESP32 Camera with ESPHome and Frigate: Project guide 📸🔧
 
-# Requirements
-In order for this to work you need to have installed:
-- ESPHome
-- Frigate
+This is a comprehensive project guide on the integration of an ESP32 camera with ESPHome and Frigate. This repository illustrates a step-by-step walkthrough on how to connect an ESP32 camera module to Frigate.
+The `esphome-config.yaml`file provided within this repository is specifically curated for an Ai-Thinker ESP32-CAM. But don't worry, if you have a different board model, you can easily edit the file to suit your needs.
 
-If you already have a Home Assistant server you can easily install then from the Addons Store page.
+[![Thumbnail](images/thumbnail.png)](https://youtu.be/ivLeoGAXwEU?si=3kqgviKVBDCt161E)
 
-# Compile Firmware with ESPHome
-- Add a new device from the dashboard
-- Replace all the contents of you configuration file with the esphome-config.yaml
-- Save and upload
-- connect to your esp camera through wifi
-- open http://192.168.4.1
-- Setup your wifi credentials
+## Prerequisites and necessary tools ⚙️
 
-# Frigate setup
-- Find your esp camera ip address
-- Add to you frigate.yaml config file the contents from this repository
-- Edit mqtt server information with yours
-- Replace the esp-cam ip address
-- Restart Frigate
+Before diving into the actual process, please ensure you have the following installations:
+
+- **ESPHome** [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon)
+
+- **Frigate** [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fblakeblackshear%2Ffrigate-hass-addons)
+
+Notably, if you are already running a Home Assistant server, these platforms can be readily installed from the [Add-ons Store Page](https://my.home-assistant.io/redirect/supervisor).
+
+## Firmware Compilation with ESPHome 📚➡️🔧
+
+1. **Add a New Device:** Start by adding a new device from your ESPHome dashboard.
+
+    ![Add device](https://esphome.io/_images/dashboard_empty.png)
+
+2. **Configuration Replacement:** Proceed by replacing all the contents of your configuration file with the [`esphome-config.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/blob/main/esphome-config.yaml).
+
+3. **Save and Upload:** After successfully replacing the contents, click on 'Save and upload' your file. (with your esp-cam connected to your computer)
+
+4. **Wifi Credential Setup:**
+    - Connect to the esp camera wifi ap from your phone or computer
+
+    - Open this page [http://192.168.4.1](http://192.168.4.1)
+
+        ![Captive Portal](https://esphome.io/_images/captive_portal-ui.png)
+
+    - Select your wifi network and type your password
+
+## Frigate Configuration ⛴️
+
+1. **Find the IP Address:** Start by finding your ESP32 camera's ip address.
+    - You can do it from your phone by using [Fing](https://play.google.com/store/apps/details?id=com.overlook.android.fing) or [Wifiman](https://play.google.com/store/apps/details?id=com.ubnt.usurvey)
+
+2. **Frigate Config:** Proceed with the addition of the contents from this repository to your [`frigate.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/blob/main/frigate.yaml) config file.
+
+3. **MQTT Server:** If you haven't already make sure to add your MQTT server information on your [`frigate.yaml`](https://github.com/fabio-garavini/ESP32-Cam-Frigate/blob/main/frigate.yaml) file
+
+    ![MQTT Config](images/mqtt-config.png)
+
+4. **Camera Config:** Replace the sample ESP-CAM ip address with your's.
+
+    ![Camera IP Config](images/camera-ip-config.png)
+
+5. **Restart:** Restart Frigate to load the changes.
+
+By this step, you should have a fully functional ESP32 camera integrated with Frigate and ESPHome.
+Happy tinker! 🎉🚀

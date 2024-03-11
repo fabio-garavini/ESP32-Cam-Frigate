@@ -1,10 +1,7 @@
 mqtt:
   host: <mqtt-server-host>
-  port: 1883
   user: <mqtt-frigate-user>
   password: <mqtt-frigate-password>
-  topic_prefix: frigate
-  client_id: frigate
 
 detectors:
   cpu0:
