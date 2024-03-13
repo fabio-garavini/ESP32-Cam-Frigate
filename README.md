@@ -1,7 +1,7 @@
 # Integrating ESP32 Camera with ESPHome and Frigate: Project guide 📸🔧
 
 This is a comprehensive project guide on the integration of an ESP32 camera with ESPHome and Frigate. This repository illustrates a step-by-step walkthrough on how to connect an ESP32 camera module to Frigate.
-The `esphome-config.yaml`file provided within this repository is specifically curated for an Ai-Thinker ESP32-CAM. But don't worry, if you have a different board model, you can easily edit the file to suit your needs.
+The `esphome-config.yaml` file provided within this repository is specifically curated for an Ai-Thinker ESP32-CAM, but don't worry, if you have a different board model you can easily edit it to suit your needs.
 
 [![Thumbnail](images/thumbnail.png)](https://youtu.be/ivLeoGAXwEU?si=3kqgviKVBDCt161E)
 
