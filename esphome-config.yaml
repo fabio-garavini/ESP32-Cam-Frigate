@@ -40,6 +40,10 @@ wifi:
 
 captive_portal:
 
+psram:
+  mode: octal
+  speed: 80MHz
+
 i2c:
   - id: camera_i2c
     sda: GPIO26
